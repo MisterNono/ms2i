@@ -1,0 +1,56 @@
+{# app/Resources/views/layout.html.twig #}
+
+<!DOCTYPE html>
+
+{% block html_head_tag %}
+<html lang="fr">
+{% endblock %}
+
+<head>
+
+<meta charset="utf-8">
+<meta name="author" content="http://ms2i.net">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+        
+<link rel="icon" type="image/png" href="{{ asset(template_path) }}/site/images/favicon_ms2i_informatique.png" title="Services informatique : maintenance, dépannage, formation, conseil, ingénierie informatique" />
+
+{% block head %}
+	<!-- Can be overrited on the bundles -->
+{% endblock %}
+
+<title>
+    {% block title %}
+    	MS2I INFORMATIQUE
+    {% endblock %}
+</title>
+
+
+{% block stylesheets %}
+	<!-- Can be overrited on the bundles -->
+{% endblock %}
+
+
+
+</head>
+
+{% block html_body_tag %}
+<body>
+{% endblock %}
+
+
+{% block body %}
+		
+	<!-- Can be overrited on the bundles -->
+
+{% endblock %}
+
+
+		
+
+{% block javascripts %}
+	<!-- Can be overrited on the bundles -->
+{% endblock %}
+
+</body>
+
+</html>

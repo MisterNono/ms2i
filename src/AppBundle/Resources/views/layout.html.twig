@@ -1,0 +1,51 @@
+{# src/AppBundle/Resources/views/layout.html.twig #}
+
+
+{% extends "::layout.html.twig" %}
+
+{% block html_head_tag %}
+<html lang="fr" class="no-js">
+{% endblock %}
+
+{% block head %}
+	
+	<!-- Can be overrited on the bundles -->
+	
+{% endblock %}
+
+
+
+{% block title %}
+
+  {{ parent() }}
+
+{% endblock %}
+
+{% block stylesheets %}
+	{% include "AppBundle::styles.html.twig" %}
+{% endblock %}
+
+
+{% block html_body_tag %}
+<body id="body" data-spy="scroll" data-target=".header">
+{% endblock %}
+
+{% block body %}
+
+<div id="page">
+   
+  {% block AppBundle_body %}
+      
+        
+        {# a new blok is defined : the bundle view will be able to fill it #}
+        
+      {% block javascripts %}
+          {% include "AppBundle::scripts.html.twig" %}
+      {% endblock %}
+
+
+  {% endblock %}
+
+</div>
+	
+{% endblock %}
