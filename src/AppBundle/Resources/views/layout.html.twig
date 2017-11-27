@@ -3,13 +3,25 @@
 
 {% extends "::layout.html.twig" %}
 
-{% block html_head_tag %}
-<html lang="fr" class="no-js">
-{% endblock %}
+
 
 {% block head %}
 	
 	<!-- Can be overrited on the bundles -->
+	
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
+	
 	
 {% endblock %}
 
@@ -26,26 +38,33 @@
 {% endblock %}
 
 
-{% block html_body_tag %}
-<body id="body" data-spy="scroll" data-target=".header">
-{% endblock %}
+
 
 {% block body %}
 
+
+<div class="fh5co-loader"></div>
+
 <div id="page">
-   
+ 
   {% block AppBundle_body %}
       
         
         {# a new blok is defined : the bundle view will be able to fill it #}
-        
+       
+
+  
+</div>
+  
+      <div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	  </div>
+	 
       {% block javascripts %}
           {% include "AppBundle::scripts.html.twig" %}
       {% endblock %}
-
+      
 
   {% endblock %}
-
-</div>
 	
 {% endblock %}

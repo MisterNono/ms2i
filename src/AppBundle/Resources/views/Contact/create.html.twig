@@ -1,0 +1,28 @@
+ 
+{% extends "AppBundle::layout.html.twig" %}
+
+  {% block head %}
+	<meta name="keywords" content="services informatiques, ingénierie, expertises, formation, conseil, maintenance, dépannage, réseaux informatiques" />
+	<meta name="description" content="Services informatique : maintenance, dépannage, réseaux, développement, formation, conseil, ingénierie et expertises informatique">
+  {% endblock %}
+  
+
+  {% block title %}
+	Contact - {{ parent() }}
+  {% endblock %}
+  
+
+  {% block AppBundle_body %}
+
+	
+	{% include "AppBundle::nav.html.twig" %}
+	
+    {% include "AppBundle::header.html.twig" %}
+   
+    {% include "AppBundle::contact.html.twig" %}
+    
+    {% include "AppBundle::starter.html.twig" %}
+    
+    {% include "AppBundle::footer.html.twig" %}
+    
+  {% endblock %}

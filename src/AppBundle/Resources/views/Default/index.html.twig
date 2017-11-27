@@ -14,24 +14,25 @@
 
   {% block AppBundle_body %}
 
-		
+	
+	{% include "AppBundle::nav.html.twig" %}
+	
     {% include "AppBundle::header.html.twig" %}
    
-    {% include "AppBundle::slider.html.twig" %}
+    {% include "AppBundle::counter.html.twig" %}
+   
+    {% include "AppBundle::explore.html.twig" %}
     
-    {% include "AppBundle::about.html.twig" %}
+    {% include "AppBundle::project.html.twig" %}
     
-    {% include "AppBundle::latest_products.html.twig" %}
+    {% include "AppBundle::steps.html.twig" %}
+   
+    {% include "AppBundle::testimonial.html.twig" %}
     
-    {% include "AppBundle::pricing.html.twig" %}
-    
-    {% include "AppBundle::work.html.twig" %}
-    
-    {% include "AppBundle::service.html.twig" %}
-    
-    {% include "AppBundle::contact.html.twig" %}
+    {% include "AppBundle::blog.html.twig" %}
+   
+    {% include "AppBundle::starter.html.twig" %}
     
     {% include "AppBundle::footer.html.twig" %}
-    
     
   {% endblock %}
