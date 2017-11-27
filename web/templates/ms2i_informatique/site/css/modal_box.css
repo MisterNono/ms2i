@@ -1,0 +1,41 @@
+	
+		.modalLayer{
+			display: none;
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: rgba(0, 0, 0, 0.5);
+			z-index: 2000;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			overflow:auto; 
+		}
+		.modalLayer:target{
+			display: block;
+		}
+		.popup_block{
+			background: #fff;
+			padding: 20px;
+			border: 1px solid #ddd;
+			position: relative;
+			margin: 10% auto;
+			width: 40%;
+			box-shadow: 0px 0px 20px #000;
+			border-radius: 10px;
+		}
+		img.modal_close_button {
+			float: right;
+			margin: -55px -55px 0 0;
+			cursor: pointer;
+		}
+		.modal_open_button{
+			cursor: pointer;
+			color: blue;
+			text-decoration: underline;
+		}
+		
+		
