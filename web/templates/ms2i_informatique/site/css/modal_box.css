@@ -8,10 +8,7 @@
 			right: 0;
 			background-color: rgba(0, 0, 0, 0.5);
 			z-index: 2000;
-			margin-left: auto;
-			margin-right: auto;
-			margin-top: 5px;
-			margin-bottom: 5px;
+			margin: auto;
 			overflow:auto; 
 		}
 		.modalLayer:target{
@@ -38,4 +35,12 @@
 			text-decoration: underline;
 		}
 		
-		
+	
+@media screen and (max-width: 768px) {
+  .popup_block{
+			width: 80%;
+			min-width: 300px;
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+}	
