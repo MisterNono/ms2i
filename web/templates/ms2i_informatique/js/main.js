@@ -249,7 +249,7 @@
 		mobileMenuOutsideClick();
 		offcanvasMenu();
 		burgerMenu();
-		contentWayPoint();
+		// contentWayPoint();
 		dropdown();
 		goToTop();
 		loaderPage();
