@@ -1,11 +1,37 @@
+<div class="modalLayer" id="informations_legales">
+	<div class="popup_block">
+		<a href="#noWhere"><img alt="Fermer" title="Fermer la fenêtre" class="modal_close_button" src="{{ asset(template_path) }}/site/images/close_pop.png"></a>
+		
+		<h4>Siège social</h4>
+
+			<p style="text-align: left;">13 rue des Cerisiers<br />34725 Saint André de Sangonis</p>
+			
+		<h4>Téléphone</h4>
+
+			<p style="text-align: left;">06 68 97 56 38</p>
+			
+		<h4>Immatriculation au RCS</h4>
+
+			<p style="text-align: left;">512 506 775 - RCS Montpellier</p>
+			
+		<a href="#noWhere" class="close_link">Fermer</a>
+	</div>
+</div>
+
+
 <footer id="fh5co-footer" role="contentinfo" style="height: 30px;">
 		<div class="container">
 			
 
 			<div class="row copyright">
-				<div class="col-md-12 text-center">
+				<div class="col-md-12 text-center animate-box" data-animate-effect="fadeIn">
 					<p>
-						<small class="block"><a href="#" target="_blank">CGV</a> - <a href="#" target="_blank">Informations légales</a></small>
+						<small class="block">
+						<a href="{{ path('info_cgv') }}" target="_blank">CGV</a> - 
+						
+						<a href="#informations_legales">Informations légales</a>
+						</small>
+						
 						<small class="block">&copy; 2017 and beyond - <a href="{{ path('index') }}">MS2I Informatique</a> - All Rights Reserved.</small> 
 					</p>
 					
