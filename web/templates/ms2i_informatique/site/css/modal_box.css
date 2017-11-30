@@ -35,6 +35,13 @@
 			text-decoration: underline;
 		}
 		
+		.close_link {
+			position: absolute;
+			right: 10px;
+			bottom: 10px;
+			
+		}
+		
 	
 @media screen and (max-width: 768px) {
   .popup_block{

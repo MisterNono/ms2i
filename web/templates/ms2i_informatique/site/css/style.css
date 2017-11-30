@@ -1,4 +1,9 @@
 
+body
+{
+	min-width: 380px;
+}
+
 .blog-text {
 	height: 500px;
 }
