@@ -34,40 +34,36 @@
 
 {% endblock %}
 
+
+
 {% block stylesheets %}
-	{% include "AppBundle::styles.html.twig" %}
-	
-	
+	{% include "AppBundle::styles.html.twig" %}	
 {% endblock %}
 
 
 
 
-{% block body %}
-
-
+{% block html_body_tag %}
 <div class="fh5co-loader"></div>
 
-<div id="page">
+<div id="page"> <!-- start id="page" -->
  
-  {% block AppBundle_body %}
-      
-        
+    {% block AppBundle_body %}
         {# a new blok is defined : the bundle view will be able to fill it #}
-       
+    {% endblock %}
 
-  
-</div>
-  
-      <div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-	  </div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop" title="Accueil site MS2I Informatique"><i class="icon-arrow-up"></i></a>
+	 </div>
 	 
-      {% block javascripts %}
-          {% include "AppBundle::scripts.html.twig" %}
-      {% endblock %}
+     {% block javascripts %}
+         {% include "AppBundle::scripts.html.twig" %}
+     {% endblock %}
+      
       
 
-  {% endblock %}
+</div> <!-- end id="page" -->
+
 	
 {% endblock %}

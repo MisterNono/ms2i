@@ -17,7 +17,9 @@ class InfoController extends Controller
      */
     public function indexAction(Request $request)
     {
-        return $this->render('AppBundle:Info:read_cgv.html.twig');
+        return $this->render('AppBundle:Info:read_cgv.html.twig', array(
+            "title" => "CGV"
+        ));
     }
     
     

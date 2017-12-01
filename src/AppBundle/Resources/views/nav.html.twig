@@ -1,19 +1,33 @@
 <nav class="fh5co-nav" role="navigation">
 		
-		
-		
 		<div class="top-menu">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-1">
-						<div id="fh5co-logo"><a href="{{ path('index') }}">MS2I<span>&nbsp;Informatique</span></a></div>
+						<div id="fh5co-logo"><a href="{{ path('index') }}" title="Logo MS2I Informatique">MS2I<span>&nbsp;Informatique</span></a></div>
 					</div>
 					<div class="col-xs-11 text-right menu-1">
 						<ul>
-							<li class="active btn-cta"><a href="{{ path('index') }}"><span>Home</span></a></li>
-							<li><a href="{{ path('index') }}#conseil-service-informatique"><span>Conseil</span></a></li>
-							<li><a href="{{ path('index') }}#conseil-service-informatique"><span>Services</span></a></li>
-							<li><a href="{{ path('contact') }}#contact_form"><span>Contact</span></a></li>
+						
+						{% if title == "Accueil" %}
+        	                {% set active = "active btn-cta" %}
+                        {% else %}
+        	                {% set active = "" %}
+        	            {% endif %}
+						
+							<li class="{{ active }}" title="Accueil MS2I Informatique"><a href="{{ path('index') }}"><span>Home</span></a></li>
+							
+							<li><a href="{{ path('index') }}#conseil-service-informatique" title="Conseil informatique"><span>Conseil</span></a></li>
+							<li><a href="{{ path('index') }}#conseil-service-informatique" title="Service Informatique"><span>Services</span></a></li>
+							
+							
+						{% if title == "Contact" %}
+        	                {% set active = "active btn-cta" %}
+                        {% else %}
+        	                {% set active = "" %}
+        	            {% endif %}
+        	            
+							<li class="{{ active }}"><a href="{{ path('contact') }}#contact_form" title="Contact MS2I Informatique"><span>Contact</span></a></li>
 						</ul>
 					</div>
 				</div>
