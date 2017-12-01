@@ -5,7 +5,7 @@
 
 
 
-{% block head %}
+{% block head_content %}
 	
 	<!-- Can be overrited on the bundles -->
 	
@@ -21,49 +21,28 @@
 	<meta name="twitter:card" content="" />
 
 	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
-	
-	
-	
-{% endblock %}
 
-
-
-{% block title %}
-
-  {{ parent() }}
-
-{% endblock %}
-
-
-
-{% block stylesheets %}
-	{% include "AppBundle::styles.html.twig" %}	
-{% endblock %}
-
-
-
-
-{% block html_body_tag %}
-<div class="fh5co-loader"></div>
-
-<div id="page"> <!-- start id="page" -->
- 
-    {% block AppBundle_body %}
-        {# a new blok is defined : the bundle view will be able to fill it #}
+    {% block title %}
+      {{ parent() }}
     {% endblock %}
 
 
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop" title="Accueil site MS2I Informatique"><i class="icon-arrow-up"></i></a>
-	 </div>
+
+    {% block stylesheets %}
+        {% include "AppBundle::styles.html.twig" %}	
+    {% endblock %}
+
+{% endblock %}
+
+
+ 
+{% block body_content %}
+        {# a new blok is defined : the bundle view will be able to fill it #}
+{% endblock %}
+
+
+
 	 
-     {% block javascripts %}
-         {% include "AppBundle::scripts.html.twig" %}
-     {% endblock %}
-      
-      
-
-</div> <!-- end id="page" -->
-
-	
+{% block javascripts %}
+    {% include "AppBundle::scripts.html.twig" %}
 {% endblock %}

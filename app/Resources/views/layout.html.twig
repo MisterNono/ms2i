@@ -2,9 +2,7 @@
 
 <!DOCTYPE html>
 
-{% block html_head_tag %}
 <html lang="fr">
-{% endblock %}
 
 <head>
 
@@ -13,16 +11,16 @@
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Services informatiques : maintenance, dépannage, réseaux, développement, formation, conseil, ingénierie et expertise informatique" />
-<meta name="keywords" content="services informatiques, services, informatique, maintenance, dépannage, réseaux, développement, formation, conseil, ingénierie, expertise informatique" />
 <meta name="author" content="ms2i.net" />
+
+{% block head_content %}
+	<!-- Can be overrited on the bundles -->
+{% endblock %}
+
 
 
 <link rel="icon" type="image/png" href="{{ asset(template_path) }}/site/images/favicon_ms2i_informatique.png" title="Services informatique : maintenance, dépannage, formation, conseil, ingénierie informatique" />
 
-{% block head %}
-	<!-- Can be overrited on the bundles -->
-{% endblock %}
 
 <title>
     {% block title %}
@@ -39,23 +37,25 @@
 
 </head>
 
-{% block html_body_tag %}
 <body>
-{% endblock %}
 
+<div class="fh5co-loader"></div>
+<div id="page"> <!-- start id="page" -->
 
-{% block AppBundle_body %}
-		
+{% block body_content %}
 	<!-- Can be overrited on the bundles -->
-
 {% endblock %}
 
-
+<div class="gototop js-top">
+	<a href="#" class="js-gotop" title="Accueil site MS2I Informatique"><i class="icon-arrow-up"></i></a>
+</div>
 		
 
 {% block javascripts %}
 	<!-- Can be overrited on the bundles -->
 {% endblock %}
+
+</div> <!-- end id="page" -->
 
 </body>
 
