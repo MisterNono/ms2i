@@ -1,9 +1,32 @@
 
-body
+#page
 {
-	min-width: 380px;
+	min-width: 250px;
 }
 
 .blog-text {
 	height: 500px;
+}
+
+.mention_adresse
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	text-align: center;
+}
+
+.mention_adresse p
+{
+	color: #4396b8;
+	line-height: 1.2;
+	font-size: smaller;
+}
+
+.formErrors
+{
+	color: #d84949;
+	font-weight: bold;
+	display: inline-block;
+	margin-left: 1%;
 }
