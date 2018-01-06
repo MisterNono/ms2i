@@ -1,0 +1,89 @@
+<div class="cadreMap">
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col-md-4 col-sm-4 col-xs-12">
+				<h3 class="green-head">Lieux d'intervention</h3>
+				<p>Sans que cette liste soit exhaustive, celle-ci présente
+					quelques villes d'intervention de MS2I INFORMATIQUE sur le département
+					de l'Hérault.<br />Bien entendu MS2I INFORMATIQUE assure ces services sur
+					d'autres villes.<br /><a href="{{ path("contact") }}" title="Contact MS2I INFORMATIQUE">Renseignez-vous</a></p>
+
+				<br />
+			</div>
+			
+			
+			<div class="col-md-8 col-sm-8 col-xs-12" id="oMap"></div>
+
+			<script type="text/javascript">
+				
+				function initMap() {
+					var oMap = new google.maps.Map(document
+							.getElementById('oMap'), {
+						zoom : 9,
+						center: {lat: 43.581903, lng: 3.761729}
+					});
+
+
+					
+					{% set index = 0 %}
+					{% for marqueur in listMarqueur %}
+					
+					 oMarker{{index}} = new google.maps.Marker({
+					      'numero' : {{index}},
+					      'position' : new google.maps.LatLng( {{marqueur.latitude}}, {{marqueur.longitude}}),
+					      'map' : oMap,
+					      'title' : 'MS2I INFORMATIQUE - {{marqueur.nom}}'
+					    });
+
+					 var oInfo = new google.maps.InfoWindow();
+
+					 google.maps.event.addListener( oMarker{{index}}, 'click', function( data){
+						   oInfo.setContent('<p><b>MS2I INFORMATIQUE</b><br />Maintenance - Dépannage<br />Sites Internet - Référencement<br />Formation - Assistance<br />Développement<br />Ingénierie Informatique - Gestion de Projet<br />Conseil - Expertises<br /><br /><b>{{marqueur.nom}}</b><p>');
+						   oInfo.open( this.getMap(), this);
+						 });
+
+					 google.maps.event.addListener( oMarker{{index}}, 'mouseout', function( data){
+						   oInfo.close( this.getMap(), this);
+						 });
+                  
+					{% set index = index + 1 %}
+					{% endfor %}
+					
+					
+				}
+				
+			</script>
+			
+			<script 
+				type="text/javascript" 
+				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlaDdNPa-arKndvlcMwTrQBhYQ5_CXaK4&callback=initMap">
+				
+			</script>
+
+
+		</div>
+
+		<div class="row row-pb-md">
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				
+				<ul class="fh5co-footer-links">
+
+					{% for ville in listVille %}
+					<li><a
+						href="{{ path("index") }}#liste_activites" title="Entretien espaces verts : Ville ou lieu d'intervention">{{ ville.nom }}</a></li>
+					{% endfor %}
+
+				</ul>
+				
+			</div>
+
+
+		</div>
+
+		
+
+	</div>
+
+</div>
