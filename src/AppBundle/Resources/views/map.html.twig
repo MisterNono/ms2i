@@ -1,4 +1,5 @@
 <div class="cadreMap">
+
 	<div class="container">
 
 		<div class="row">
@@ -6,9 +7,9 @@
 			<div class="col-md-4 col-sm-4 col-xs-12">
 				<h3 class="green-head">Lieux d'intervention</h3>
 				<p>Sans que cette liste soit exhaustive, celle-ci présente
-					quelques villes d'intervention de MS2I INFORMATIQUE sur le département
-					de l'Hérault.<br />Bien entendu MS2I INFORMATIQUE assure ces services sur
-					d'autres villes.<br /><a href="{{ path("contact") }}" title="Contact MS2I INFORMATIQUE">Renseignez-vous</a></p>
+					quelques villes d'intervention de ALSA ENTRETIEN sur le département
+					de l'Hérault.<br />Bien entendu ALSA ENTRETIEN assure ces services sur
+					d'autres villes.<br /><a href="{{ path("contact") }}" title="Contact ALSA ENTRETIEN">Renseignez-vous</a></p>
 
 				<br />
 			</div>
@@ -40,7 +41,7 @@
 					 var oInfo = new google.maps.InfoWindow();
 
 					 google.maps.event.addListener( oMarker{{index}}, 'click', function( data){
-						   oInfo.setContent('<p><b>MS2I INFORMATIQUE</b><br />Maintenance - Dépannage<br />Sites Internet - Référencement<br />Formation - Assistance<br />Développement<br />Ingénierie Informatique - Gestion de Projet<br />Conseil - Expertises<br /><br /><b>{{marqueur.nom}}</b><p>');
+						   oInfo.setContent('<p><b>MS2I INFORMATIQUE</b><br />Ingénierie Informatique - Développement - Maintenance<br />Formation - Conseil - Expertise<br /><b>{{marqueur.nom}}</b><p>');
 						   oInfo.open( this.getMap(), this);
 						 });
 
@@ -62,27 +63,33 @@
 				
 			</script>
 
-
 		</div>
 
 		<div class="row row-pb-md">
-			<div class="col-md-3 col-sm-6 col-xs-12">
-				
-				<ul class="fh5co-footer-links">
-
-					{% for ville in listVille %}
-					<li><a
-						href="{{ path("index") }}#liste_activites" title="Entretien espaces verts : Ville ou lieu d'intervention">{{ ville.nom }}</a></li>
-					{% endfor %}
-
-				</ul>
-				
-			</div>
-
-
-		</div>
-
 		
+		{% set i = 0 %}
+		{% for ville in listVille %}
+		
+		    {% if i % 6 == 0 %}
+			<div class="col-md-3 col-sm-6 col-xs-12">
+			<ul>
+	        {% endif %}
+					
+					<li>
+					<a href="{{ path("contact") }}" target="_blank" title="Ingénierie Informatique - Développement - Formation - Maintenance - Conseil - Expertise">{{ ville.nom }}
+					</a>
+					</li>
+				
+			{% set i = i + 1 %}
+            
+		    {% if i % 6 == 0 %}
+		    </ul>
+			</div>
+	   	    {% endif %}
+	   	    
+	    {% endfor %}
+			
+		</div>
 
 	</div>
 

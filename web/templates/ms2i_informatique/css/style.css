@@ -1198,15 +1198,16 @@ h1, h2, h3, h4, h5, h6, figure {
   display: block;
 }
 
-#map {
-  width: 100%;
-  height: 500px;
-  position: relative;
+.cadreMap
+{
+	margin-bottom: 20px;
 }
-@media screen and (max-width: 768px) {
-  #map {
-    height: 200px;
-  }
+
+#oMap
+{
+	height: 320px;
+	margin-bottom: 20px;
+	border: 1px solid #8e8d8d;
 }
 
 #fh5co-offcanvas {

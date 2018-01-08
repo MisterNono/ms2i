@@ -41,4 +41,21 @@ class DefaultController extends Controller
         return $lieux;
     }
     
+    
+    
+    /**
+     * @Route("/test", name="test")
+     *
+     */
+    public function testAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        
+        return $this->render('AppBundle:Default:test.html.twig', array(
+            "title" => "Accueil",
+            "listVille" => self::getRandomListVille($em),
+            "listMarqueur" => $em->getRepository("AppBundle:Ville")->findAll(),
+        ));
+    }
+    
 }
