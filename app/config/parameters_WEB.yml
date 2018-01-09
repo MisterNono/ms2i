@@ -1,0 +1,25 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_driver: pdo_mysql
+    
+    database_port: 3306
+    database_host: msikwtsf1234.mysql.db
+    database_name: msikwtsf1234
+    database_user: msikwtsf1234
+    database_password: paradis4
+    
+    locale: fr
+    secret: ThisTokenIsNotSoSecretChangeIt
+    
+    mailer_transport: smtp
+    # mailer_auth_mode: login
+    mailer_host: ssl0.ovh.net
+    mailer_port: 587
+    mailer_user: web@alsaentretien.fr
+    mailer_password: maroc1000
+    # mailer_auth_mode: login
+    # mailer_encryption: ssl
+    
+    company_mail: contact@alsaentretien.fr
+
+    

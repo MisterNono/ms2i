@@ -1198,17 +1198,7 @@ h1, h2, h3, h4, h5, h6, figure {
   display: block;
 }
 
-.cadreMap
-{
-	margin-bottom: 20px;
-}
 
-#oMap
-{
-	height: 320px;
-	margin-bottom: 20px;
-	border: 1px solid #8e8d8d;
-}
 
 #fh5co-offcanvas {
   position: absolute;

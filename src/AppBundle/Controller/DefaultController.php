@@ -35,8 +35,8 @@ class DefaultController extends Controller
         
         $lieux = $em->getRepository("AppBundle:Ville")->findAllVille(1);
         $lieuxTmp = $em->getRepository("AppBundle:Ville")->findAllVille(0);
-        $lieuxTmp = GlobalValue::getRandomData($lieuxTmp);
         $lieux = array_merge($lieux, array_slice($lieuxTmp, 0, $NB_MAX_ELEMENTS - count($lieux)));
+        $lieux = GlobalValue::getRandomData($lieux);
         
         return $lieux;
     }

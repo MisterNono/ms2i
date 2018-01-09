@@ -1,3 +1,19 @@
+ul.liste_ville
+{
+	list-style-type: none;
+}
+     
+.cadreMap
+{
+	margin-bottom: 20px;
+}
+
+#oMap
+{
+	height: 320px;
+	margin-bottom: 20px;
+	border: 1px solid #8e8d8d;
+}
 
 #page
 {

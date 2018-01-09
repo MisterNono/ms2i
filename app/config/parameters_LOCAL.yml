@@ -1,0 +1,17 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: localhost
+    database_port: null
+    database_name: ms2i
+    database_user: root
+    database_password: null
+    
+    locale: fr
+    secret: ThisTokenIsNotSoSecretChangeIt
+    
+    mailer_transport: smtp
+    mailer_host: ssl0.ovh.net
+    mailer_user: web@alsaentretien.fr
+    mailer_password: maroc1000
+    
+    company_mail: noelmaurice4@gmail.com
